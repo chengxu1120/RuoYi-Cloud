@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FastByteArrayOutputStream;
 import com.google.code.kaptcha.Producer;
@@ -27,6 +28,7 @@ import com.ruoyi.gateway.service.ValidateCodeService;
 @Service
 public class ValidateCodeServiceImpl implements ValidateCodeService
 {
+
     @Resource(name = "captchaProducer")
     private Producer captchaProducer;
 
@@ -38,6 +40,10 @@ public class ValidateCodeServiceImpl implements ValidateCodeService
 
     @Autowired
     private CaptchaProperties captchaProperties;
+
+
+
+
 
     /**
      * 生成验证码

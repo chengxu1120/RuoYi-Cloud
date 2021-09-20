@@ -9,7 +9,8 @@ spring:
     name: ruoyi-auth
   profiles:
     # 环境配置
-    active: dev
+    active: dev   #默认激活的是开发（dev）环境：去nacos中找 ruoyi-auth-dev.yml
+    # 应用上云打包镜像启动会自动激活生产环境 spring.profiles.active=prod： 去nacos中找 ruoyi-auth-prod.yml
   cloud:
     nacos:
       discovery:

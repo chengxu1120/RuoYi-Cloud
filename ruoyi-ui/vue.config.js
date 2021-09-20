@@ -33,6 +33,7 @@ module.exports = {
     proxy: {
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
+        // target: `http://ruoyi-gateway.his:8080`, //线上环境配置
         target: `http://localhost:8080`,
         changeOrigin: true,
         pathRewrite: {
